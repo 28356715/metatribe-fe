@@ -37,12 +37,20 @@
                 <div>
                   MetaTribe (M.T) 是Web3创业DAO，我们致力于成为优秀的Web3开发者和创作者的社区组织 <br />
                   主要任务和业务:<br />
-                  Web3.0开发者和创作者教育（行业研究、课程研发）    <br />      
-                  Web3.0开发者和创作者线下活动<br />
-                  Web3.0项目亚太中文社区市场营销   <br />                    
-                  Web3.0项目亚太中文社区hackathon<br />
-                  Web3.0项目顾问、孵化、投资    <br />                                         
-                  M.T社区运营<br />
+                  <div style="margin-top:20px;padding-left:20px;">
+                    <el-row style="margin-bottom: 5px;">
+                      <el-col :span="12"><li class="el-icon-news li-noborder"></li>Web3.0开发者和创作者教育（行业研究、课程研发）</el-col>
+                      <el-col :span="8"> <li class="el-icon-news li-noborder"></li>Web3.0开发者和创作者线下活动</el-col>
+                   </el-row>
+                   <el-row style="margin-bottom: 5px;">
+                      <el-col :span="12"><li class="el-icon-news li-noborder"></li>Web3.0项目亚太中文社区市场营销</el-col>
+                      <el-col :span="8"> <li class="el-icon-news li-noborder"></li>Web3.0项目亚太中文社区hackathon</el-col>
+                   </el-row>
+                   <el-row style="margin-bottom: 5px;">
+                    <el-col :span="12"><li class="el-icon-news li-noborder"></li>Web3.0项目顾问、孵化、投资</el-col>
+                      <el-col :span="8"> <li class="el-icon-news li-noborder"></li>M.T社区运营</el-col>
+                   </el-row>
+                  </div>
                 </div>
               </div>
             </el-card>
@@ -53,7 +61,7 @@
                 <img class="img" src="../assets/web3.png" alt="dddd">
                 <div>
                   Web3加速器是专注于推动Web3在亚太中文社区普及和发展的组织机构，使命是：加速中文Web3发展和领先地位。机构诞生于“双创周”由MetaTribe与中国创业者大会联合发起，获得工信部门支持。目前在北京、上海、深圳、杭州、成都、郑州、大连、西安等城市均有Web3城市双创社区。Web3加速器由来自硅谷、中国互联网名企及加密产业圈的科学家、产品、开发者、及运营专家自发组成，成员精通Web3研究、产品设计、研发和运营工作。当前Web3加速器主要任务是在中文社区开展Web3科普及教育工作。<br />
-                  <h5>2022 中国高校Web3加速营</h5>
+                  <h4>2022 中国高校Web3加速营</h4>
                   “2022 中国高校Web3加速营”是由Web3加速器推出的面向中国高校在校生的技能提升及创业孵化项目。我们目标是通过该项计划培养一批优秀的Web3基础技术人才，为中文社区Web3发展播下火种。
                   该项目具有一定公益性。
                 </div>
@@ -63,7 +71,7 @@
 
             <el-card class="box-card">
               <div style="text-align: left;" id="mt"  class="content">
-                <div class="divTitle">M.T 社区</div>
+                <h2 class="divTitle">M.T 社区</h2>
                 <div>
                   &nbsp;&nbsp;M.T 社区期望孵化和链接不同类型的Web3 DAO组织，并为其提供DAO发起及治理、数字身份、数字牌照、社交、通信、跨组织协作等工具。M.T社区将帮助开发者和创作者更便捷协作并实现个体价值最大化、最终成为通往Web3的入口。
                 </div>
@@ -74,16 +82,16 @@
             <el-card class="box-card">
 
               <div style="text-align: left;" id="service"  class="content">
-                <div class="divTitle">服务与案例</div>
+                <h2 class="divTitle">服务与案例</h2>
                 <div>
-                  <h5>Web3项目营销</h5>
+                  <h4>Web3项目营销</h4>
                   MetaTribe营销团队由来自Binance、Huobi、BCH、DOGE等加密社区及4A公司的资深市场专家组成，为Web3项目提供亚太区市场拓展策略、营销与PR、活动策划与执行、社区运营及BD服务，团队拥有丰富的实战经验及媒体、社区资源，是亚太区最专业的Crypto营销团队。<br />
                   目前服务客户：<br />
                   Binance 、Huobi、FTX、BCH、Dfinity、Solana、Flow、Trx、Bitmain、Filcoin、Agoric、<br />
                   Fodl、NEO、Metamoundo、Cryptovoxels、Merit Circle、Celo、Infinity Force
                 </div>
                 <div>
-                  <h5>课程研发及推广</h5>
+                  <h4>课程研发及推广</h4>
                   MetaTribe课程研发团队由来自Crypto社区资深开发者及行研专家组成，通过课程助力Web3项目拓展开发者社区、丰富项目生态系统。<br />
                   当前课程：<br />
                   《Web3入门及案例解析》 <br />      
@@ -94,7 +102,7 @@
                   《Flow开发入门+实战》<br />
                 </div>
                 <div>
-                  <h5>活动</h5>
+                  <h4>活动</h4>
                   MetaTribe 提供线上及线下活动策划及落地执行，主要服务活动类型：项目路演、Meetup、Afterparty及面向开发者的：开放日、Hackthon 
                 </div>
               </div>
@@ -102,7 +110,7 @@
             <el-card class="box-card">
 
               <div style="text-align: left;" id="contact"  class="content">
-                <div class="divTitle">联系方式</div>
+                <h2 class="divTitle">联系方式</h2>
                 <div>
                   Twitter:@metatribe6465 <br />
                   E-mail:metatribebd@yahoo.com
@@ -165,7 +173,7 @@ export default {
     text-align: left;
     padding: 8px;
     }
-    a{
+    a {
     color: #000000;
     font: #333333;
     text-decoration: none;
@@ -190,6 +198,10 @@ export default {
     .divTitle {
       text-align: center;
       margin-bottom: 20px;
+    }
+    .li-noborder {
+      border-bottom:1px solid #33333300;
+      color: dodgerblue;
     }
 
   
