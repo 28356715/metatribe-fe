@@ -7,12 +7,12 @@
             <div >
               <img src="../assets/logo-color.png" alt="dddd">
               <br />
-              <span class="div-font" ref="language" >{{language==1?titleZH:titleEN}}</span>
+              <div class="div-font"  width="80%" >{{language==1?titleZH:titleEN}}</div>
             </div>
             <div >
                <el-radio-group v-model="language">
                 <el-radio-button label="1">中文</el-radio-button>
-                <el-radio-button label="0">english</el-radio-button>
+                <el-radio-button label="0">English</el-radio-button>
               </el-radio-group>
               <ul class="div-font">
                 <li v-for="menu in language==1?menuZH:menuEN">
@@ -81,11 +81,14 @@
 
             <el-card class="box-card divCard" :shadow="shadow">
               <div style="text-align: left;" id="mt"  class="content">
-                <div class="divTitle div-font" >{{language==1?mtZH.title:mtEN.mtEN}}</div>
+                <div class="divTitle div-font" style="margin-bottom: 0;" >{{language==1?mtZH.title:mtEN.title}}</div>
                 <div>
-                  <el-row>
-                    <el-col :span="10"><div style="margin-top:80px"> {{language==1?mtZH.content1:mtEN.content1}}</div> </el-col>
+                  <el-row v-if="language==1">
+                    <el-col :span="10"><div > {{language==1?mtZH.content1:mtEN.content1}}</div> </el-col>
                     <el-col :span="14"><img  class="img img-top"   src="../assets/mt.png" alt="dddd"></el-col>
+                  </el-row>
+                  <el-row v-else>
+                    <div> {{language==1?mtZH.content1:mtEN.content1}}</div> 
                   </el-row>
                 </div>
               </div>
@@ -160,18 +163,18 @@ export default {
       language:1,  //1 ：中文   0 ：英文
 
 
-      titleEN:'Web3.0 developer and creator',
+      titleEN:'Web3.0 developer and creator community organization',
       titleZH:'Web3.0开发者和创作者社区组织',
       menuZH:[{id:'#MetaTribe',desc:'MetaTribe'},
                {id:'#web3',desc:'Web3.0加速器'},
-               {id:'mt',desc:'M.T 社区'},
-               {id:'service',desc:'服务'},
-               {id:'contact',desc:'联系方式'}],
+               {id:'#mt',desc:'M.T 社区'},
+               {id:'#service',desc:'服务'},
+               {id:'#contact',desc:'联系方式'}],
       menuEN:[{id:'#MetaTribe',desc:'MetaTribe'},
                {id:'#web3',desc:'Web3.0 Accelerator'},
-               {id:'mt',desc:'M.T Communit'},
-               {id:'service',desc:'Service'},
-               {id:'contact',desc:'Contact'}],
+               {id:'#mt',desc:'M.T Communit'},
+               {id:'#service',desc:'Service'},
+               {id:'#contact',desc:'Contact'}],
 
       metatribeZH:{
         content1:"MetaTribe (M.T) 是Web3创业DAO，我们致力于成为优秀的Web3开发者和创作者的社区组织",//1/2需要代表显示的行
@@ -283,7 +286,8 @@ export default {
   }
   .left-container {
     float: right;
-    margin-right: 20%;
+    margin-right: 15%;
+    margin-left: 35%;
   }
   ul {
     list-style: none;
