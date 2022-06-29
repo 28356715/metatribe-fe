@@ -12,16 +12,23 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #333333;
+  color: #f4efef;
+  /* background-color: black; */
   margin-top: 60px;
 }
 div { 
   letter-spacing:2px;
-  line-height: 30px;
+  line-height: 50px;
+  letter-spacing:2px;
+  }
+  body {
+    background-color: black;
   }
 
 
