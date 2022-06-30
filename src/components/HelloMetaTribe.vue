@@ -45,10 +45,14 @@
             </div>
         </el-row>
         <el-row>
-          <div class="block left-container img-container" >
-             <img src="../assets/logo-color.png"  class="img-postion" /> <br/>
-             <span v-if="language==1"  class="demonstration div-font" >合作伙伴</span>
-             <span v-else class="demonstration div-font" >Partner</span>
+          <div class="block left-container img-container" style="border: 1px solid #ffffff60;" >
+             <div style="margin-top: 15px;">
+               <span v-if="language==1"  class="demonstration div-font" >合作伙伴</span>
+               <span v-else class="demonstration div-font" >Partner</span><br/>
+             </div>
+            
+             <img src="../assets/partner.png" /> 
+             
           </div>
         </el-row>
           </el-col>
@@ -377,6 +381,7 @@ export default {
     }
     .img-postion {
       margin:20px 0 20px 0 ;
+      color: #ffffff60
     }
 
 </style>
