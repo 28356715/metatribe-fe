@@ -5,7 +5,7 @@
         <el-row>
           <div class="grid-content bg-purple left-container" >
             <div >
-              <img src="../assets/logo-color.png" alt="dddd">
+              <img src="../assets/logo-color.png">
               <br />
               <div class="div-font"  width="80%" >{{language==1?titleZH:titleEN}}</div>
             </div>
@@ -16,33 +16,51 @@
               </el-radio-group>
               <ul class="div-font">
                 <li v-for="menu in language==1?menuZH:menuEN">
-                  <a :href="menu.id">{{menu.desc}}</a>
+                  <a :href="'#'+menu.id">{{menu.desc}}</a>
                 </li>
               </ul>
             </div>
           </div>
           </el-row>
           <el-row> 
-           <div class="block left-container" style="margin-top: 60px;width: 400px;">
-                <el-carousel trigger="click" height="400px" style="margin-top:20px ;">
-                  <el-carousel-item v-for="item in 4" :key="item">
-                    <h3 class="small">{{ item }}</h3>
+           <div class="block left-container img-container" >
+                <el-carousel trigger="click" height="400px" class="img-postion" >
+                  <el-carousel-item v-for="item in metaWarrior" :key="item.url" >
+                    <img :src="item.url" />
                   </el-carousel-item>
                 </el-carousel>
                <span v-if="language==1"  class="demonstration div-font" >Meta Warrior是Web3加速器成员身份体系</span>
                <span v-else class="demonstration div-font" >Meta Warrior is a Web3 Accelerator membership system</span>
               </div>
         </el-row>
+          <el-row> 
+           <div class="block left-container img-container" >
+              <el-carousel trigger="click" height="400px" class="img-postion">
+              <el-carousel-item v-for="item in events" :key="item.url">
+                    <img :src="item.url" />
+                  </el-carousel-item>
+              </el-carousel>
+              <span v-if="language==1"  class="demonstration div-font" >MetaTribe往期活动</span>
+              <span v-else class="demonstration div-font" >Past MetaTribe Events</span>
+            </div>
+        </el-row>
+        <el-row>
+          <div class="block left-container img-container" >
+             <img src="../assets/logo-color.png"  class="img-postion" /> <br/>
+             <span v-if="language==1"  class="demonstration div-font" >合作伙伴</span>
+             <span v-else class="demonstration div-font" >Partner</span>
+          </div>
+        </el-row>
           </el-col>
         <el-col :span="12">
           <div class="grid-content bg-purple-light">
             <el-card class="box-card divCard" :shadow="shadow">
-              <div id="metatribe"  class="content">
+              <div id="#metatribe"  class="content">
                 <!-- <h1>MetaTribe</h1> -->
                 <div>
                   <img src="../assets/font-metatribe.png" alt="dddd" class="img img-top" >
                   <!-- <div class="divTitle div-font">MetaTribe</div> -->
-                  <div >&nbsp;&nbsp;{{language==1?metatribeZH.content1:metatribeEN.content1}}<br />
+                  <div >{{language==1?metatribeZH.content1:metatribeEN.content1}}<br />
                   {{language==1?metatribeZH.content2:metatribeEN.content2}}<br />
                   </div>
                   <div style="margin-top:20px;font-size: 16px;">
@@ -64,23 +82,21 @@
             </el-card>
 
              <el-card class="box-card divCard" :shadow="shadow">
-               <div style="text-align: left;" id="web3"  class="content">
+               <div style="text-align: left;" id="#web3"  class="content">
                 <!-- <h1>Web3.0加速器</h1> -->
                 <img v-if="language==1" class="img" src="../assets/web3-red.png" style="margin-bottom: 20px;">
                 <img v-else class="img" src="../assets/web3-en.png" style="margin-bottom: 20px;">
                 <!-- <div class="divTitle div-font">Web3.0加速器</div> -->
-                <div>&nbsp;&nbsp;{{language==1?web3ZH.content1:web3EN.content1}}
+                <div>{{language==1?web3ZH.content1:web3EN.content1}}
                   <br />
                   <img v-if="language==1" src="../assets/web3-white.png" alt="dddd" class="img img-top" >
                   <img v-else src="../assets/mt-en.png" alt="dddd" class="img img-top" >
-                  &nbsp;&nbsp;{{language==1?web3ZH.content2:web3EN.content2}}
+                  {{language==1?web3ZH.content2:web3EN.content2}}
                 </div>
               </div>
              </el-card>
-
-
             <el-card class="box-card divCard" :shadow="shadow">
-              <div style="text-align: left;" id="mt"  class="content">
+              <div style="text-align: left;" id="#mt"  class="content">
                 <div class="divTitle div-font" style="margin-bottom: 0;" >{{language==1?mtZH.title:mtEN.title}}</div>
                 <div>
                   <el-row v-if="language==1">
@@ -93,10 +109,9 @@
                 </div>
               </div>
             </el-card>
-
             <el-card class="box-card divCard" :shadow="shadow">
 
-              <div style="text-align: left;" id="service"  class="content">
+              <div style="text-align: left;" id="#service"  class="content">
                <div class="divTitle div-font" >{{language==1?serviceZH.title:serviceEN.title}}</div>
                 <div>
                   <h4>{{language==1?serviceZH.content1:serviceEN.content1}}</h4>
@@ -129,13 +144,12 @@
                 <div>
                   <h4>{{language==1?serviceZH.content8:serviceEN.content8}}</h4>
                   {{language==1?serviceZH.content9:serviceEN.content9}}
-                  
                 </div>
               </div>
             </el-card>
             <el-card class="box-card divCard" :shadow="shadow">
 
-              <div style="text-align: left;" id="contact"  class="content">
+              <div style="text-align: left;" id="#contact"  class="content">
                 <h2 class="divTitle">{{language==1?contactZH.title:contactEN.title}}</h2>
                 <div>
                   Twitter:@metatribe6465 <br />
@@ -216,7 +230,7 @@ export default {
         title:"联系方式",
       },
       contactEN:{
-        title:"contact details",
+        title:"Contact",
       },
       serviceZH:{
         title:"服务与案例",
@@ -247,13 +261,30 @@ export default {
         content7:"Current courses:",
         content8:"Activity",
         content9:"MetaTribe provides online and offline event planning and implementation, the main service event types: Project Roadshow, Meetup, Afterparty and for developers: Open Day, Hackthon",
-        courses1:"《Web3 Introduction and Case Analysis》",
-        courses2:"《Twenty-Five Lectures on the Metaverse》",
-        courses3:"《Introduction to Alliance Chain Development + Actual Combat》",
-        courses4:"《Introduction to Ethereum Development + Actual Combat》",
-        courses5:"《Introduction to IC Development + Actual Combat》",
-        courses6:"《Introduction to Flow Development + Actual Combat》",
+        courses1:"Web3 Introduction and Case Analysis》",
+        courses2:"Twenty-Five Lectures on the Metaverse",
+        courses3:"Introduction to Alliance Chain Development + Actual Combat",
+        courses4:"Introduction to Ethereum Development + Actual Combat》",
+        courses5:"Introduction to IC Development + Actual Combat",
+        courses6:"Introduction to Flow Development + Actual Combat",
       },
+      metaWarrior:[
+        {url:require("../assets/1.png")},
+        {url:require("../assets/2.png")},
+        {url:require("../assets/3.png")},
+        {url:require("../assets/4.png")},
+        {url:require("../assets/5.png")},
+      ],
+       events:[
+        {url:require("../assets/event1.png")},
+        {url:require("../assets/event2.png")},
+        {url:require("../assets/event3.png")},
+        {url:require("../assets/event4.png")},
+        {url:require("../assets/event5.png")},
+        {url:require("../assets/event6.png")},
+        {url:require("../assets/event7.png")},
+
+      ],
     }
   }
 }
@@ -286,8 +317,8 @@ export default {
   }
   .left-container {
     float: right;
-    margin-right: 15%;
-    margin-left: 35%;
+    margin-right: 20%;
+    margin-left: 30%;
   }
   ul {
     list-style: none;
@@ -340,33 +371,12 @@ export default {
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       font-weight: 700;
     }
+    .img-container {
+      margin-top: 60px;
+      width: 400px;
+    }
+    .img-postion {
+      margin:20px 0 20px 0 ;
+    }
 
-    @import url("//unpkg.com/element-ui@2.15.7/lib/theme-chalk/index.css");
-.el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-     background-image: url(../assets/1.png);
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-     background-image: url(../assets/2.png);
-  }
-    .el-carousel__item:nth-child(2n+2) {
-     background-image: url(../assets/3.png);
-  }
-    .el-carousel__item:nth-child(2n+3) {
-     background-image: url(../assets/4.png);
-  }
-    .el-carousel__item:nth-child(2n+4) {
-     background-image: url(../assets/5.png);
-  }
-
-
-  
 </style>
