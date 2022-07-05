@@ -22,6 +22,11 @@
             </div>
           </div>
           </el-row>
+          <el-row>
+            <div>
+              <video :src="src" type="video/mp4"></video>
+            </div>
+          </el-row>
           <el-row> 
            <div class="block left-container img-container" >
                 <el-carousel trigger="click" height="400px" class="img-postion" >
@@ -52,7 +57,6 @@
              </div>
             
              <img src="../assets/partner.png" /> 
-             
           </div>
         </el-row>
           </el-col>
@@ -104,7 +108,7 @@
                 <div class="divTitle div-font" style="margin-bottom: 0;" >{{language==1?mtZH.title:mtEN.title}}</div>
                 <div>
                   <el-row v-if="language==1">
-                    <el-col :span="10"><div > {{language==1?mtZH.content1:mtEN.content1}}</div> </el-col>
+                    <el-col :span="10"><div style="margin-top: 80px;" > {{language==1?mtZH.content1:mtEN.content1}}</div> </el-col>
                     <el-col :span="14"><img  class="img img-top"   src="../assets/mt.png" alt="dddd"></el-col>
                   </el-row>
                   <el-row v-else>
@@ -179,6 +183,7 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       shadow:'never',
       language:1,  //1 ：中文   0 ：英文
+      src: require('../assets/test.mp4'),
 
 
       titleEN:'Web3.0 developer and creator community organization',
@@ -245,7 +250,7 @@ export default {
         content5:"课程研发及推广",
         content6:"MetaTribe课程研发团队由来自Crypto社区资深开发者及行研专家组成，通过课程助力Web3项目拓展开发者社区、丰富项目生态系统",
         content7:"当前课程：",
-        content7:"活动",
+        content8:"活动",
         content9:"MetaTribe 提供线上及线下活动策划及落地执行，主要服务活动类型：项目路演、Meetup、Afterparty及面向开发者的：开放日、Hackthon ",
         courses1:"《Web3入门及案例解析》",
         courses2:"《元宇宙二十五讲》",
@@ -346,7 +351,7 @@ export default {
 
     .el-card  {
       margin-bottom: 50px!important;
-      background-color: #121D23;
+      background-color: #121D23!important;
 
     }
     .img {
@@ -372,7 +377,7 @@ export default {
 
     }
     .div-font {
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
       font-weight: 700;
     }
     .img-container {
